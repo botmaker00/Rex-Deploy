@@ -1,7 +1,7 @@
 
 from subprocess import run as srun
 import logging
-from os import path as ospath
+from os import path as ospath, getenv
 from dotenv import load_dotenv
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
