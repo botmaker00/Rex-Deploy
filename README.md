@@ -12,7 +12,6 @@ A simple method to deploy your bot to **Heroku** using a **Google Colab notebook
 2. Fill these details inside the notebook:
    - HEROKU_API_KEY  
    - HEROKU_APP_NAME  
-   - GITHUB_REPO  
    - All required environment variables (BOT_TOKEN, API_ID, API_HASH, DB_URI, etc.)
 
 3. Run all notebook cells.  
@@ -27,7 +26,6 @@ A simple method to deploy your bot to **Heroku** using a **Google Colab notebook
 
 ## 📌 Notes
 - Keep your API keys private.  
-- Make sure the **Procfile** is correct (example: `worker: python3 main.py`).  
 - Re-run the notebook to update/deploy new bot versions.
 
 ---
