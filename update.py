@@ -1,5 +1,6 @@
 # ==================== IMPORTS ====================
-from os import path as opath, getenv, makedirs, remove
+from os import path as ospath, getenv, makedirs, remove
+import os
 from logging import basicConfig, INFO, getLogger
 from logging.handlers import RotatingFileHandler
 from subprocess import run as srun, DEVNULL
@@ -10,7 +11,7 @@ import logging
 import sys
 
 # ==================== LOGGING SETUP (Clean & Professional) ====================
-if opath.exists("log.txt"):
+if os.path.exists("log.txt"):
     try:
         remove("log.txt")
     except:
@@ -31,7 +32,9 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 # ==================== LOAD ENV ====================
-load_dotenv('config.env', override=True)
+# Load env file if exists
+if os.path.exists('config.env'):
+    load_dotenv('config.env')
 
 # ==================== BOT START TIME ====================
 botStartTime = time.time()
