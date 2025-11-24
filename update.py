@@ -70,13 +70,8 @@ SUDO_USERS = getenv("SUDO_USERS")
 EVERYONE_CHATS = getenv("EVERYONE_CHATS")
 
 # Log Channel
-LOG_CHANNEL_RAW = getenv("LOG_CHANNEL", "").strip()
-if LOG_CHANNEL_RAW and LOG_CHANNEL_RAW.lstrip("-").isdigit():
-    LOG_CHANNEL = int(LOG_CHANNEL_RAW)
-else:
-    LOG_CHANNEL = None
+LOG_CHANNEL = getenv("LOG_CHANNEL", "").strip()
 
-# Auto Updater (Optional)
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "").strip()
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "").strip()
 
