@@ -45,6 +45,14 @@ API_ID = int(getenv("API_ID", "0") or "0")
 API_HASH = getenv("API_HASH", "").strip()
 BOT_TOKEN = getenv("BOT_TOKEN", "").strip()
 
+# Validate critical variables
+if not API_ID or API_ID == 0:
+    raise RuntimeError("❌ API_ID is not set in config.env! Please configure it properly.")
+if not API_HASH:
+    raise RuntimeError("❌ API_HASH is not set in config.env! Please configure it properly.")
+if not BOT_TOKEN:
+    raise RuntimeError("❌ BOT_TOKEN is not set in config.env! Please configure it properly.")
+
 # Session & Database
 SESSION_NAME = getenv("SESSION_NAME", "VideoEncoderBot")
 MONGO_URI = getenv("MONGO_URI")
