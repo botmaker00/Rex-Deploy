@@ -76,7 +76,6 @@ if not OWNER_ID:
 
 SUDO_USERS = get_int_list("SUDO_USERS")
 EVERYONE_CHATS = get_int_list("EVERYONE_CHATS")
-AUTHORIZED_CHATS = list(set(OWNER_ID + SUDO_USERS + EVERYYONE_CHATS))
 
 # Log Channel
 LOG_CHANNEL_RAW = getenv("LOG_CHANNEL", "").strip()
