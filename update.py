@@ -33,8 +33,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 # ==================== LOAD ENV ====================
 # Load env file if exists
-if os.path.exists('config.env'):
-    load_dotenv('config.env')
+load_dotenv('config.env', override=True)
 
 # ==================== BOT START TIME ====================
 botStartTime = time.time()
